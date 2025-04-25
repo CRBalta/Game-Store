@@ -7,98 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="shortcut icon" href="./img/Icono.png" type="image/x-icon">
     <style>
-      body {
-        font-family: 'Press Start 2P', cursive;
-        background-color: #1a1a2e;
-        color: #ffffff;
-        position: relative;
-        overflow-x: hidden;
-      }
-  
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: radial-gradient(circle at center, rgba(98, 0, 234, 0.2) 0%, transparent 70%);
-        animation: pulse 10s infinite;
-        z-index: -1;
-      }
-  
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-      }
-  
-      .navbar {
-        background-color: #6a0dad !important;
-      }
-  
-      .carousel-item img {
-        height: 100vh;
-        object-fit: contain;
-        background-color: #000;
-      }
-  
-      .juegos-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
-      }
-  
-      .juego {
-        background: #2a2a40;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-        text-align: center;
-      }
-  
-      .juego img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        background-color: #000;
-      }
-  
-      h2 {
-        color: #bb86fc;
-      }
-  
-      .form-control:focus {
-        box-shadow: 0 0 0 0.2rem rgba(187, 134, 252, 0.25);
-      }
-  
-      .bg-light {
-        background-color: #212132 !important;
-      }
-  
-      footer {
-        background-color: #121212;
-      }
-  
-      /* Responsive barra de búsqueda */
-      @media (max-width: 768px) {
-        .navbar .d-flex {
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-        }
-  
-        .navbar .form-control,
-        .navbar .btn {
-          width: 90%;
-          margin-bottom: 10px;
-        }
-      }
+      
     </style>
   </head>
   
 <body>
-
-  <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">GAME</a>
@@ -119,7 +35,6 @@
     </div>
   </nav>
 
-  <!-- Carrusel de destacados -->
   <div id="destacadosCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -142,45 +57,41 @@
     </button>
   </div>
 
-  <!-- Sección Xbox -->
   <section class="p-5" id="xbox">
     <h2 class="text-center text-danger">Juegos Destacados Xbox</h2>
     <div class="juegos-grid">
-      <div class="juego"><img src="./img/Halo.jpg" alt="Halo Infinite"><h3>Halo Infinite</h3><p>Acción futurista en el universo Halo.</p></div>
-      <div class="juego"><img src="./img/Forza.jpg" alt="Forza Horizon 5"><h3>Forza Horizon 5</h3><p>Conduce por México en este juego de carreras espectacular.</p></div>
-      <div class="juego"><img src="./img/Gears.jpg" alt="Gears 5"><h3>Gears 5</h3><p>Shooter en tercera persona con modo campaña y multijugador.</p></div>
-      <div class="juego"><img src="./img/Fifa.jpg" alt=""><h3>FIFA 24</h3><p>El simulador de fútbol más famoso, ahora renovado.</p></div>
-      <div class="juego"><img src="./img/Starfield.jpg" alt="Starfield"><h3>Starfield</h3><p>Explora el espacio en este RPG de ciencia ficción.</p></div>
+      <div class="juego"><a href="halo.html"><img src="./img/Halo.jpg" alt="Halo Infinite"></a><h3>Halo Infinite</h3><p>Acción futurista en el universo Halo.</p></div>
+      <div class="juego"><a href="forza.html"><img src="./img/Forza.jpg" alt="Forza Horizon 5"></a><h3>Forza Horizon 5</h3><p>Conduce por México en este juego de carreras espectacular.</p></div>
+      <div class="juego"><a href="gears.html"><img src="./img/Gears.jpg" alt="Gears 5"></a><h3>Gears 5</h3><p>Shooter en tercera persona con modo campaña y multijugador.</p></div>
+      <div class="juego"><a href="fifa.html"><img src="./img/Fifa.jpg" alt="FIFA 24"></a><h3>FIFA 24</h3><p>El simulador de fútbol más famoso, ahora renovado.</p></div>
+      <div class="juego"><a href="starfield.html"><img src="./img/Starfield.jpg" alt="Starfield"></a><h3>Starfield</h3><p>Explora el espacio en este RPG de ciencia ficción.</p></div>
     </div>
   </section>
 
-  <!-- Sección PlayStation -->
   <section class="p-5 bg-light" id="playstation">
     <h2 class="text-center text-danger">Juegos Destacados PlayStation</h2>
     <div class="juegos-grid">
-      <div class="juego"><img src="./img/Spiderman.jpg" alt="Spider-Man 2"><h3>Spider-Man 2</h3><p>Vuela por Nueva York con Peter Parker y Miles Morales.</p></div>
-      <div class="juego"><img src="./img/PS5-ragnarok.jpeg" alt="God of War Ragnarok"><h3>God of War Ragnarok</h3><p>La saga de Kratos continúa con más acción y mitología nórdica.</p></div>
-      <div class="juego"><img src="./img/Horizon.jpg" alt="Horizon Forbidden West"><h3>Horizon Forbidden West</h3><p>Acompaña a Aloy en un nuevo mundo repleto de criaturas mecánicas.</p></div>
-      <div class="juego"><img src="./img/The last of us.jpg" alt="The Last of Us Part II"><h3>The Last of Us Part II</h3><p>Una historia intensa en un mundo post-apocalíptico.</p></div>
-      <div class="juego"><img src="./img/Gran turismo.jpg" alt="Gran Turismo 7"><h3>Gran Turismo 7</h3><p>Realismo total en la simulación de conducción.</p></div>
+      <div class="juego"><a href="spiderman.html"><img src="./img/Spiderman.jpg" alt="Spider-Man 2"></a><h3>Spider-Man 2</h3><p>Vuela por Nueva York con Peter Parker y Miles Morales.</p></div>
+      <div class="juego"><a href="gow.html"><img src="./img/PS5-ragnarok.jpeg" alt="God of War Ragnarok"></a><h3>God of War Ragnarok</h3><p>La saga de Kratos continúa con más acción y mitología nórdica.</p></div>
+      <div class="juego"><a href="horizon.html"><img src="./img/Horizon.jpg" alt="Horizon Forbidden West"></a><h3>Horizon Forbidden West</h3><p>Acompaña a Aloy en un nuevo mundo repleto de criaturas mecánicas.</p></div>
+      <div class="juego"><a href="tlou.html"><img src="./img/The last of us.jpg" alt="The Last of Us Part II"></a><h3>The Last of Us Part II</h3><p>Una historia intensa en un mundo post-apocalíptico.</p></div>
+      <div class="juego"><a href="gt7.html"><img src="./img/Gran turismo.jpg" alt="Gran Turismo 7"></a><h3>Gran Turismo 7</h3><p>Realismo total en la simulación de conducción.</p></div>
     </div>
   </section>
 
-  <!-- Sección Nintendo -->
   <section class="p-5" id="nintendo">
     <h2 class="text-center text-danger">Juegos Destacados Nintendo</h2>
     <div class="juegos-grid">
-      <div class="juego"><img src="./img/Zelda.jpg" alt="Zelda TOTK"><h3>Zelda: Tears of the Kingdom</h3><p>La nueva aventura de Link en el mundo de Hyrule.</p></div>
-      <div class="juego"><img src="./img/Mario.jpg" alt="Super Mario Odyssey"><h3>Super Mario Odyssey</h3><p>Acompaña a Mario en una aventura por mundos increíbles.</p></div>
-      <div class="juego"><img src="./img/Animal.jpg" alt="Animal Crossing"><h3>Animal Crossing: New Horizons</h3><p>Construye tu propia isla y haz nuevos amigos.</p></div>
-      <div class="juego"><img src="./img/Pokemon.jpg" alt="Pokémon Scarlet"><h3>Pokémon Scarlet</h3><p>Una nueva generación de Pokémon te espera.</p></div>
-      <div class="juego"><img src="./img/Splatoon.jpg" alt="Splatoon 3"><h3>Splatoon 3</h3><p>Peleas de tinta con mucha acción multijugador.</p></div>
+      <div class="juego"><a href="zelda.html"><img src="./img/Zelda.jpg" alt="Zelda TOTK"></a><h3>Zelda: Tears of the Kingdom</h3><p>La nueva aventura de Link en el mundo de Hyrule.</p></div>
+      <div class="juego"><a href="mario.html"><img src="./img/Mario.jpg" alt="Super Mario Odyssey"></a><h3>Super Mario Odyssey</h3><p>Acompaña a Mario en una aventura por mundos increíbles.</p></div>
+      <div class="juego"><a href="animal.html"><img src="./img/Animal.jpg" alt="Animal Crossing"></a><h3>Animal Crossing: New Horizons</h3><p>Construye tu propia isla y haz nuevos amigos.</p></div>
+      <div class="juego"><a href="pokemon.html"><img src="./img/Pokemon.jpg" alt="Pokémon Scarlet"></a><h3>Pokémon Scarlet</h3><p>Una nueva generación de Pokémon te espera.</p></div>
+      <div class="juego"><a href="splatoon.html"><img src="./img/Splatoon.jpg" alt="Splatoon 3"></a><h3>Splatoon 3</h3><p>Peleas de tinta con mucha acción multijugador.</p></div>
     </div>
   </section>
 
   <footer class="bg-dark text-white text-center py-3">
     <p>&copy; GAME - Todos los derechos reservados</p>
   </footer>
-
 </body>
 </html>
